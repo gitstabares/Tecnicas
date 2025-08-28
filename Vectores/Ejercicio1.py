@@ -1,9 +1,4 @@
-def Leer(n):
-    notas = n*[None]
-    for i in range(n):
-        print(f"Digite la nota #{i+1}")
-        notas[i] = input()
-    return notas
+from Funciones import Leer, Promedio
 
 def NotaAltayBaja(notas):
     notaAlta,notaBaja = 2*[notas[0]]
@@ -14,13 +9,7 @@ def NotaAltayBaja(notas):
             notaBaja = i
     return notaAlta, notaBaja
 
-def Promedio(notas):
-    sum = 0
-    for i in notas:
-        sum += i
-    return sum/len(notas)
-
-notas = Leer(10)
+notas = Leer(10, "nota")
 notaMasAlta, notaMasBaja = NotaAltayBaja(notas)
 promedioNotas = Promedio(notas)
 cantidadNotasSuperioresPromedio = sum([1 for i in notas if i > promedioNotas])
