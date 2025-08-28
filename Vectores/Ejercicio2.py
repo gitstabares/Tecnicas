@@ -1,5 +1,5 @@
-from Funciones import Leer, Promedio
+from Funciones import LeerNumeros, Promedio
 
-numeros = Leer(10, "numero")
+numeros = LeerNumeros(10, "numero")
 promedio = Promedio([i for i in numeros if i%2==0])
 print(promedio)

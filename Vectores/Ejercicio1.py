@@ -1,4 +1,4 @@
-from Funciones import Leer, Promedio
+from Funciones import LeerNumeros, Promedio
 
 def NotaAltayBaja(notas):
     notaAlta,notaBaja = 2*[notas[0]]
@@ -9,7 +9,7 @@ def NotaAltayBaja(notas):
             notaBaja = i
     return notaAlta, notaBaja
 
-notas = Leer(10, "nota")
+notas = LeerNumeros(10, "nota")
 notaMasAlta, notaMasBaja = NotaAltayBaja(notas)
 promedioNotas = Promedio(notas)
 cantidadNotasSuperioresPromedio = sum([1 for i in notas if i > promedioNotas])
