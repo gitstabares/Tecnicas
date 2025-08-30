@@ -1,4 +1,4 @@
-def Promedio(n):
+def Promedio(n : list[float]):
     if (len(n) <= 0):
         return 0
     sum = 0
@@ -11,7 +11,7 @@ def LeerNumeros(n : float,tipoDato : str):
     i = 0
     while valores[i] == None:
         try:
-            valores[i] = float(input(f"Digite su {tipoDato} #{i+1}: "))
+            valores[i] = float(input(f"Digite el/la {tipoDato} #{i+1}: "))
             i+=1
         except:
             print("Valor invalido")
@@ -24,7 +24,7 @@ def LeerTexto(n : float, tipoDato : str, permitidos : list = []):
     i = 0
     while textos[i] == None:
         try:
-            textos[i] = input(f"Digite su {tipoDato} #{i+1}: ")
+            textos[i] = input(f"Digite el/la {tipoDato} #{i+1}: ")
             if textos[i] not in permitidos and len(permitidos) > 0:
                 raise Exception
             i+=1
@@ -34,3 +34,12 @@ def LeerTexto(n : float, tipoDato : str, permitidos : list = []):
         if i >= n:
             break
     return textos
+
+def ValorAltoBajo(n):
+    vAlto,vBajo = 2*[n[0]]
+    for i in n:
+        if i > vAlto:
+            vAlto = i
+        if i < vBajo:
+            vBajo = i
+    return vAlto, vBajo
