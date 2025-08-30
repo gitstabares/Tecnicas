@@ -1,10 +1,10 @@
-def Promedio(notas):
-    if (len(notas) <= 0):
+def Promedio(n):
+    if (len(n) <= 0):
         return 0
     sum = 0
-    for i in notas:
+    for i in n:
         sum += i
-    return sum/len(notas)
+    return sum/len(n)
 
 def LeerNumeros(n : float,tipoDato : str):
     valores = n*[None]
