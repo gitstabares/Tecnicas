@@ -1,0 +1,8 @@
+palabras = {"apple":"manzana","pear":"pera"}
+
+with open("diccionario.txt","w") as archivo:
+    archivo.write(str(palabras))
+
+with open("diccionario.txt","r") as archivo:
+    contenido = dict(archivo.read())
+    print(contenido)
